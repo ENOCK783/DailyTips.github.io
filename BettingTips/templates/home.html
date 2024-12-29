@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Daily Betting Tips</h2>
+<div class="tips-container">
+    {% for tip in tips %}
+        <div class="tip-card">
+            <h3>{{ tip.match }}</h3>
+            <p><strong>Tip:</strong> {{ tip.tip }}</p>
+            <p><strong>Odds:</strong> {{ tip.odds }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
